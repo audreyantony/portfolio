@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Portfolio | CV</title>
+        <title>Portfolio | Galerie</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Gruppo|Montserrat&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
             ?>
         </header>
 
-        <!-- CONTENU PRINCIPAL PAGE CV -->
+        <!-- CONTENU PRINCIPAL PAGE GALERIE -->
         <main>
             <?php
-            include "content/c_cv.php";
+            include "content/c_galerie.php";
             ?>
-            </main>
+        </main>
 
         <!-- FOOTER -->
         <footer>

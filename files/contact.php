@@ -21,7 +21,7 @@
     <?php
     include "content/c_contact.php";
     ?>
-    <main>
+    </main>
 
         <!-- FOOTER -->
         <footer>
