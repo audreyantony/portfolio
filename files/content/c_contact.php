@@ -66,5 +66,8 @@
             <input type="submit" name="envoyer" value="Envoyer" class="btnenvoyer">
 
         </form>
+        <button>
+            <a href="?p=acc">Retour à l'accueil</a>
+        </button>
     </div>
 </section>

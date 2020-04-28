@@ -540,7 +540,6 @@ section .contenu form .btnenvoyer:hover {
     .container {
         margin: 0;
     }
-
 }
 
 @media screen and (max-width:800px) {
@@ -623,7 +622,7 @@ section .contenu form .btnenvoyer:hover {
     }
     section .contenu button:hover {
         background-color: rgb(245, 239, 244);
-        letter-spacing: 5px;
+        letter-spacing: 2px;
         transition: 1s;
     }
 }
@@ -678,7 +677,7 @@ section .contenu form .btnenvoyer:hover {
 
 
 
-/* BOUTON CONTACT */
+/* BOUTON MULTITÂCHE */
 
 section .contenu button {
     text-align: center;
@@ -695,7 +694,7 @@ section .contenu button {
 
 section .contenu button:hover {
     background-color: rgb(245, 239, 244);
-    letter-spacing: 15px;
+    letter-spacing: 5px;
     transition: 1s;
 }
 
