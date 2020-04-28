@@ -1,0 +1,584 @@
+/*
+    font-family: 'Fredericka the Great', cursive;   TITRE
+    font-family: 'Montserrat', sans-serif;          NORMAL
+
+    COULEURS :
+    #F5EFF4 : BLANC;
+    245, 239, 244
+    #304B42 : VERT;
+    48, 75, 66
+    #545452 : BRUN;
+    84, 84, 82
+*/
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* PAGE */
+
+.page {
+    width: 100%;
+    height: 80vh;
+    background-blend-mode: screen;
+    background-image: url(../img/fondaccueil.jpg);
+    background-color: #545452;
+    background-position: center top;
+    background-size: cover;
+}
+
+/* BARRE DE NAVIGATION */
+
+.nav {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-image: url(../img/fondaccueil.jpg);
+    background-color: #F5EFF4;
+    z-index: 1;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 1rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #545452;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    transition: all 1s;
+}
+
+.nav div.logo a:hover {
+    letter-spacing: 7px;
+    transition: all 1s;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding-right: 1.2rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #545452;
+    line-height: 65px;
+    font-size: 1em;
+    transition: all 1s;
+}
+
+.nav div.main_list ul li a:hover {
+    letter-spacing: 7px;
+    transition: all 1s;
+}
+
+/* NAV CACHÉ */
+
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+/*ANIMATIONS*/
+
+.navTrigger {
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    right: 1rem;
+    top: 5px;
+    bottom: 0;
+}
+
+.navTrigger i {
+    background-color: rgba(84,84,84,0.8);
+    border-radius: 5px;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+}
+
+.navTrigger i:nth-child(1) {
+    -webkit-animation: outT 0.8s backwards;
+    animation: outT 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+    margin: 5px 0;
+    -webkit-animation: outM 0.8s backwards;
+    animation: outM 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+    -webkit-animation: outBtm 0.8s backwards;
+    animation: outBtm 0.8s backwards;
+    -webkit-animation-direction: reverse;
+    animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+    -webkit-animation: inT 0.8s forwards;
+    animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+    -webkit-animation: inM 0.8s forwards;
+    animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+    -webkit-animation: inBtm 0.8s forwards;
+    animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes inM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes outM {
+    50% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes outM {
+    50% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes inT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes inT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outT {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@keyframes outT {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes inBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes inBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@-webkit-keyframes outBtm {
+    0% {
+        -webkit-transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        -webkit-transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+@keyframes outBtm {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-9px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-9px) rotate(135deg);
+    }
+}
+
+.affix {
+    padding: 0;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    line-height: 75px;
+    text-align: center;
+    background-blend-mode: overlay;
+    background-image: url(../img/fondaccueil.jpg);
+    background-color: #F5EFF4;
+    bottom: 0;
+}
+
+.socialmedia {
+    float: left;
+    color: #42433E;
+}
+
+.socialmedia img {
+    padding-top: 20px ;
+    padding-left: 15px;
+    max-height: 40px;
+    transition: 1s;
+}
+
+.socialmedia a img:hover {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 1s;
+}
+
+.credit {
+    float: right;
+    color: #42433E;
+    padding-top: 10px;
+    padding-right: 20px;
+    opacity: 0.6;
+}
+
+.credit a {
+    text-decoration: none;
+    color: #42433E;
+    opacity: 1;
+    transition: 1s;
+}
+
+.credit a:hover {
+    letter-spacing: 5px;
+    transition: 1s;
+}
+
+/* CONTENU DE LA PAGE D'ACCUEIL */
+
+section {
+    width: 60%;
+}
+
+section .contenu {
+    vertical-align: middle;
+    padding: 120px 0;
+}
+
+section .contenu h1 {
+    text-align: center;
+    margin: 20px auto 0 auto;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 4.8em;
+    font-weight: normal;
+    color: #545452;
+    transition: 1s;
+}
+
+section .contenu h2 {
+    text-align: center;
+    margin: -25px auto 20px auto;
+    letter-spacing: 12px;
+    font-weight: normal;
+    color: #F5EFF4;
+    background-color: rgba(84, 84, 82, 0.4);
+    transition: 1s;
+}
+
+section .contenu p {
+    background-color: rgba(200,200,200,0.6);
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    transition: 1s;
+    color: #545452;
+}
+section .contenu p .big {
+    letter-spacing: 5px;
+    font-size: 1.2em;
+}
+
+/* PARAGRAPHE SPÉCIAL ACCUEIL */
+
+section .contenu .pacc {
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 10px 20px;
+    transition: 1s;
+}
+
+section .contenu .pacc a {
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #F5EFF4;
+    background-color: rgba(84, 84, 82,0.4);
+    padding: 2px 4px;
+    transition: 1s;
+}
+
+section .contenu .pacc a:hover {
+    letter-spacing: 5px;
+    padding: 2px 6px;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY POUR LE HEADER ET LE FOOTER */
+
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .nav div.logo a {
+        font-size: 1.5em;
+    }
+    .credit {
+        display: none;
+    }
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 1px;
+    }
+    .nav div.logo a:hover {
+        letter-spacing: 4px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 40vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-blend-mode: overlay;
+        background-image: url(../img/fondaccueil.jpg);
+        background-color: #F5EFF4;
+        border-top: white 15px solid;
+        border-bottom: white 15px solid;
+        background-position: center;
+
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+        height: 30px;
+        background: none;
+        margin:2px;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+        padding: 0 15px;
+        background: none;
+
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOUTON CONTACT */
+
+section .contenu button {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: rgba(245, 239, 244,0.8);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    transition: 1s;
+    color: #545452;
+}
+
+section .contenu button:hover {
+    background-color: rgb(245, 239, 244);
+    letter-spacing: 15px;
+    transition: 1s;
+}
+
+section .contenu button a {
+    text-decoration: none;
+    color: inherit;
+}
