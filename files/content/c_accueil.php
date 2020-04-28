@@ -13,7 +13,7 @@
         <button class="btncontact">
             <a href="?p=contact">Contact</a>
         </button>
-        <p class="pacc">En formation au <a href="https://www.cf2m.be/">CF2M</a> depuis <script type="text/javascript">
+        <p class="pacc">En formation au <a href="https://www.cf2m.be/" title="Aller vers le site du CF2M">CF2M</a> depuis <script type="text/javascript">
 
                 var Date1 = new Date(2020,0,6);
                 var Date2 = new Date();
