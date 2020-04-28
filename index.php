@@ -20,10 +20,10 @@ if(!isset($_GET["p"])){
         case "tutos":
             include "files/tutos.php";
             break;
-        case "tutos1":
+        case "tutoriel-favori":
             include "files/tutoriel-favori.php";
             break;
-        case "tutos2":
+        case "tutoriel-maison":
             include "files/tutoriel-maison.php";
             break;
         case "contact":

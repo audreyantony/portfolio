@@ -580,8 +580,50 @@ section .contenu .containerliens .itemliens a {
     color: inherit;
 }
 
+/* PAGE TUTO PRINCIPAL*/
 
+section .contenu .tuto {
+    background-color: rgba(200,200,200,0.6);
+    padding: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+    transition: 1s;
+    color: #545452;
+}
 
+section .contenu .tuto h3 {
+    letter-spacing: 3px;
+    font-size: 2em;
+    transition: 1s;
+    font-weight: lighter;
+    background-color: rgba(245, 239, 244, 0.6);
+    margin-bottom: 15px;
+}
+
+section .contenu .tuto p {
+    font-size: 1.3em;
+    background: none;
+    padding: 5px;
+}
+
+section .contenu .tuto p a {
+    color: #F5EFF4;
+    background-color: rgba(84, 84, 82, 0.4);
+    padding: 2px 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 1s;
+}
+
+section .contenu .tuto p a:hover {
+    transition: 1s;
+    letter-spacing: 2px;
+}
+
+section .contenu .tuto button {
+    margin-bottom: 55px;
+}
 
 
 
