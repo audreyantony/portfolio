@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+    <html lang="fr">
     <head>
-        <title>Portfolio | Contact</title>
+        <title>Portfolio | Liens</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Gruppo|Montserrat&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
             ?>
         </header>
 
-        <!-- CONTENU PRINCIPAL PAGE CONTACT -->
+        <!-- CONTENU PRINCIPAL PAGE LIENS -->
         <main>
             <?php
-            include "content/c_contact.php";
+            include "content/c_liens.php";
             ?>
-        </main>
+        <main>
 
         <!-- FOOTER -->
         <footer>
