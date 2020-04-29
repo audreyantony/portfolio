@@ -48,6 +48,7 @@ body {
     background-image: url(../img/fondaccueil.jpg);
     background-color: #F5EFF4;
     top: 0;
+    z-index: 1;
 }
 
 .nav div.logo {
@@ -625,11 +626,110 @@ section .contenu .tuto button {
     margin-bottom: 55px;
 }
 
+/* PAGE TUTO MAISON SLIDE ETC */
 
+/* SLIDESHOW */
+.slideshow-container {
+    background-color: rgba(200,200,200,0.6);
+    position: relative;
+    margin: auto;
+}
 
+/* SLIDES CACHÉS */
+.mySlides {
+    display: none;
+    height: 450px;
+}
 
+/* BOUTONS NAVIGATION */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 13px 13px 0;
+    user-select: none;
+    background-color: rgba(84, 84, 82,0.3);
+}
 
+.next {
+    right: 0;
+    border-radius: 13px 0 0 13px;
+}
 
+.prev:hover, .next:hover {
+    background-color: rgba(84, 84, 82,0.8);
+}
+
+/* TEXTE BAS DE DIV */
+.text {
+    color: #f2f2f2;
+    font-size: 2em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+/* COMPTAGE DES PAGES */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 1.4em;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    float: left;
+}
+
+/* INDICATEURS (POINTS) */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.actif, .dot:hover {
+    background-color: #717171;
+}
+
+/* FONDU (PAS SAVOYARDE MALHEUREUSEMENT) */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* PARAGRAPHE DANS LES SLIDES */
+
+.mySlides .slideContent {
+    padding-top: 100px;
+    position: center;
+    background: none;
+}
 
 
 
@@ -684,7 +784,7 @@ section .contenu .tuto button {
     .nav div.main_list ul {
         flex-direction: column;
         width: 100%;
-        height: 230px;
+        height: 270px;
         right: 0;
         left: 0;
         bottom: 0;
