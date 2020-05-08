@@ -48,7 +48,7 @@ body {
     background-image: url(../img/fondaccueil.jpg);
     background-color: #F5EFF4;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav div.logo {
@@ -320,6 +320,7 @@ footer {
     background-image: url(../img/fondaccueil.jpg);
     background-color: #F5EFF4;
     bottom: 0;
+    z-index: 2;
 }
 
 .socialmedia {
@@ -368,7 +369,7 @@ section {
 
 section .contenu {
     vertical-align: middle;
-    padding: 120px 0;
+    padding: 170px 0 100px 0;
 }
 
 section .contenu h1 {
@@ -433,7 +434,7 @@ section .contenu .pacc a:hover {
 
 section .contenu form {
     background-color: rgba(200,200,200,0.6);
-    padding: 40px;
+    padding: 30px 70px;
     text-align: center;
     letter-spacing: 1px;
     font-size: 0.9em;
@@ -443,7 +444,7 @@ section .contenu form {
 
 
 section .contenu form div {
-    padding: 25px;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -452,7 +453,7 @@ section .contenu form div {
 }
 
 section .contenu form div input {
-    margin: 10px;
+    margin: 5px;
     padding: 8px;
     text-align: center;
     width: 50%;
@@ -470,7 +471,7 @@ form div textarea {
     text-align: center;
     padding: 10px;
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #F5EFF4;
     color: #545452;
     letter-spacing: 3px;
@@ -776,15 +777,111 @@ section .contenu .tuto button {
 
 .mySlides .tableInSlide tr th {
     text-align: center;
-    padding: 2px 35px;
+    padding: 2px 15px;
 }
 
 .mySlides .tableInSlide tr td {
     text-align: center;
-    padding: 2px 35px;
+    padding: 2px 15px;
     font-size: 0.8em;
     letter-spacing: 2px;
 }
+
+/* GALERIE */
+
+img {
+    vertical-align: middle;
+}
+
+.galerie {
+    position: relative;
+}
+
+.galerie .img-slide {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.galerie .curseur {
+    cursor: pointer;
+}
+
+.img-prec,
+.img-suiv {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding: 16px;
+    margin-top: 0;
+    color: rgba(245, 239, 244,0.8);
+    font-weight: bold;
+    font-size: 3.8em;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.img-suiv {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.img-prec:hover,
+.img-suiv:hover {
+    color: #F5EFF4;
+}
+
+.galerie .img-caption {
+    text-align: center;
+    height: auto;
+    background-color: rgba(84, 84, 82, 0.8);
+    padding: 12px 40px;
+    margin-bottom: 20px;
+}
+
+#caption {
+    background: none;
+    letter-spacing: 10px;
+    color: #F5EFF4;
+    font-size: 1.5em;
+}
+
+.galerie .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.galerie .column {
+    float: left;
+    width: 16.66%;
+}
+
+.galerie .demo {
+    opacity: 0.6;
+}
+
+.img-active,
+.demo:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -805,7 +902,7 @@ section .contenu .tuto button {
 
 @media screen and (max-width:800px) {
     .nav div.logo a {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
     .credit {
         display: none;
@@ -948,6 +1045,20 @@ section .contenu .tuto button {
         font-size: 1em;
     }
 }
+
+/* MEDIA QUERY PAGE GELERIE */
+
+@media screen and (max-width: 800px) {
+    .img-prec,
+    .img-suiv {
+        font-size: 2.7em;
+    }
+    #caption {
+        letter-spacing: 5px;
+        font-size: 0.8em;
+    }
+}
+
 
 
 
