@@ -24,7 +24,7 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* PAGE */
+/* PAGE*/
 
 .page {
     width: 100%;
@@ -639,7 +639,7 @@ section .contenu .tuto button {
 /* SLIDES CACHÉS */
 .mySlides {
     display: none;
-    height: 750px;
+    min-height: 850px;
 }
 
 /* BOUTONS NAVIGATION */
@@ -667,14 +667,14 @@ section .contenu .tuto button {
     background-color: rgba(84, 84, 82,0.8);
 }
 
-/* TEXTE BAS DE DIV */
+/* TITRE SLIDE */
 .text {
     color: rgba(84, 84, 82, 0.7);
     font-size: 1.8em;
     font-weight: bolder;
-    padding: 8px 12px;
+    padding: 10px;
     position: absolute;
-    top: 20px;
+    top: 10px;
     width: 100%;
     text-align: center;
     letter-spacing: 3px;
@@ -683,7 +683,7 @@ section .contenu .tuto button {
 /* COMPTAGE DES PAGES */
 .numbertext {
     color: #f2f2f2;
-    font-size: 1.4em;
+    font-size: 1.3em;
     padding: 8px 12px;
     position: absolute;
     top: 0;
@@ -727,7 +727,7 @@ section .contenu .tuto button {
 /* PARAGRAPHE DANS LES SLIDES */
 
 .mySlides .slideContent {
-    padding: 150px 0 0 0;
+    padding: 120px 0 0 0;
     background: none;
     width: 80%;
     text-align: justify;
@@ -764,6 +764,14 @@ section .contenu .tuto button {
     color: rgba(245, 239, 244,0.6);
 }
 
+.mySlides .slideContent .pre .nope {
+    opacity: 0;
+}
+
+.mySlides .slideContentsec .pre .nope {
+    opacity: 0;
+}
+
 /* TABLE DANS LES SLIDES */
 
 .mySlides .tableInSlide {
@@ -785,6 +793,47 @@ section .contenu .tuto button {
     padding: 2px 15px;
     font-size: 0.8em;
     letter-spacing: 2px;
+}
+
+/* LIENS */
+
+.mySlides .slideContent a {
+    text-decoration: none;
+    color: #545452;
+    font-size: 1.3em;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    transition: all 1s;
+}
+
+.mySlides .slideContent a:hover {
+    padding: 0;
+    letter-spacing: 2px;
+    transition: all 1s;
+}
+
+.mySlides .slideContentsec a {
+    text-decoration: none;
+    color: #545452;
+    font-size: 1.3em;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    transition: all 1s;
+}
+
+.mySlides .slideContentsec a:hover {
+    padding: 0;
+    letter-spacing: 2px;
+    transition: all 1s;
+}
+
+/* IFRAME */
+
+iframe {
+    text-align: center;
+    margin-top: 35px;
+    width: 100%;
+    min-height: 400px;
 }
 
 /* GALERIE */
@@ -953,7 +1002,6 @@ img {
         width: 100%;
         padding: 0 15px;
         background: none;
-
     }
     .nav div.media_button {
         display: block;

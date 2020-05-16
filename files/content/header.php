@@ -27,13 +27,11 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="js/scripts.js"></script>
 
 
 <script>
     $('.navTrigger').click(function () {
         $(this).toggleClass('active');
-        console.log("Menu cliqué");
         $("#mainListDiv").toggleClass("show_list");
         $("#mainListDiv").fadeIn();
 
