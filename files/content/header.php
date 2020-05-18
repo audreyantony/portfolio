@@ -1,40 +1,20 @@
 <header>
-    <nav class="nav">
-        <div class="container">
-            <div class="logo">
-                <a href="?p=acc"> { Portfolio } </a>
-            </div>
-            <div id="mainListDiv" class="main_list">
-                <ul class="navlinks">
-                    <li><a href="?p=acc">Accueil</a></li>
-                    <li><a href="?p=gal">Galerie</a></li>
-                    <li><a href="?p=tutos">Tutoriel</a></li>
-                    <li><a href="?p=link">Liens</a></li>
-                    <li><a href="?p=cv">CV</a></li>
-                    <li><a href="?p=contact">Contact</a></li>
-                </ul>
-            </div>
-            <span class="navTrigger">
-                <i></i>
-                <i></i>
-                <i></i>
-            </span>
+    <nav role="navigation">
+        <div id="menuToggle">
+
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="?p=acc"><li>Accueil</li></a>
+                <a href="?p=gal"><li>Galerie</li></a>
+                <a href="?p=link"><li>Liens</li></a>
+                <a href="?p=tutos"><li>Tutoriels</li></a>
+                <a href="?p=cv"><li>CV</li></a>
+                <a href="?p=contact"><li>Contact</li></a>
+                <a href="?p=crud"><li>.</li></a>
+            </ul>
         </div>
     </nav>
 </header>
-
-
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-
-<script>
-    $('.navTrigger').click(function () {
-        $(this).toggleClass('active');
-        $("#mainListDiv").toggleClass("show_list");
-        $("#mainListDiv").fadeIn();
-
-    });
-
-</script>

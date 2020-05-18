@@ -7,7 +7,7 @@
             <a href="https://www.linkedin.com/in/audrey-antony-b7754084/" target="_blank"><img src="img/reseauxsociaux/linkedin.png" alt="linkedIn" title="Aller vers ma page LinkedIn"></a>
         </div>
         <div class="credit">
-            <p> Audrey Antony © 2020 - <a href="https://www.cf2m.be/developpeur-web/" title="Aller vers le site du CF2M">CF2M 2020</a></p>
+            <p> Audrey Antony © 2020</p>
         </div>
     </div>
 </footer>

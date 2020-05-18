@@ -32,6 +32,9 @@ if(!isset($_GET["p"])){
         case "cv":
             include "files/cv.php";
             break;
+        case "crud":
+            include "files/crud.php";
+            break;
         default:
             include "files/accueil.php";
     }
