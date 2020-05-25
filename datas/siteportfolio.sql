@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.4
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3308
--- Généré le :  ven. 22 mai 2020 à 07:23
--- Version du serveur :  8.0.18
--- Version de PHP :  7.3.12
+-- Hôte : sql8614.phpnet.org:3306
+-- Généré le : lun. 25 mai 2020 à 19:04
+-- Version du serveur :  10.2.32-MariaDB-10.2.32+maria~stretch-log
+-- Version de PHP : 7.3.14-1~deb10u1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `siteportfolio`
+-- Base de données : `web2020audrey`
 --
 
 -- --------------------------------------------------------
@@ -28,15 +28,13 @@ SET time_zone = "+00:00";
 -- Structure de la table `liens`
 --
 
-DROP TABLE IF EXISTS `liens`;
-CREATE TABLE IF NOT EXISTS `liens` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `liens` (
+  `id` int(10) UNSIGNED NOT NULL,
   `nom` varchar(150) COLLATE utf8_bin NOT NULL,
   `link` varchar(250) COLLATE utf8_bin NOT NULL,
   `texteliens` varchar(5000) COLLATE utf8_bin NOT NULL,
-  `idutilisateur` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `idutilisateur` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `liens`
@@ -65,15 +63,13 @@ INSERT INTO `liens` (`id`, `nom`, `link`, `texteliens`, `idutilisateur`) VALUES
 -- Structure de la table `mail`
 --
 
-DROP TABLE IF EXISTS `mail`;
-CREATE TABLE IF NOT EXISTS `mail` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `mail` (
+  `id` int(10) UNSIGNED NOT NULL,
   `nom` varchar(100) COLLATE utf8_bin NOT NULL,
   `prenom` varchar(100) COLLATE utf8_bin NOT NULL,
   `email` varchar(150) COLLATE utf8_bin NOT NULL,
-  `contenu` varchar(5000) COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `contenu` varchar(5000) COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `mail`
@@ -89,22 +85,64 @@ INSERT INTO `mail` (`id`, `nom`, `prenom`, `email`, `contenu`) VALUES
 -- Structure de la table `utilisateur`
 --
 
-DROP TABLE IF EXISTS `utilisateur`;
-CREATE TABLE IF NOT EXISTS `utilisateur` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `pseudo` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+CREATE TABLE `utilisateur` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `pseudo` varchar(50) COLLATE utf8_bin NOT NULL,
   `mdp` varchar(11) COLLATE utf8_bin NOT NULL,
-  `droits` char(3) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `nom` (`pseudo`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `droits` char(3) COLLATE utf8_bin NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateur`
 --
 
 INSERT INTO `utilisateur` (`id`, `pseudo`, `mdp`, `droits`) VALUES
-(1, 'admin', 'admin', 'all');
+(1, 'Drey', '42', 'all');
+
+--
+-- Index pour les tables déchargées
+--
+
+--
+-- Index pour la table `liens`
+--
+ALTER TABLE `liens`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `mail`
+--
+ALTER TABLE `mail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nom` (`pseudo`);
+
+--
+-- AUTO_INCREMENT pour les tables déchargées
+--
+
+--
+-- AUTO_INCREMENT pour la table `liens`
+--
+ALTER TABLE `liens`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT pour la table `mail`
+--
+ALTER TABLE `mail`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `utilisateur`
+--
+ALTER TABLE `utilisateur`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
