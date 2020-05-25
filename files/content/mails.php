@@ -1,12 +1,3 @@
-<?php
-$sql = "SELECT id, nom, prenom, contenu, email FROM siteportfolio.mail ORDER BY id DESC ;";
-
-$querymail = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db).mysqli_error($db));
-
-$nb = mysqli_num_rows($querymail);
-
-?>
-
 
 <section>
     <div class="contenu">

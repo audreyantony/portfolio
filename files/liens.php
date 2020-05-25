@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT id, nom, link, texteliens FROM siteportfolio.liens ORDER BY id ASC;";
+$sql = "SELECT id, nom, link, texteliens FROM liens ORDER BY id ASC;";
 
 $queryliens = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db).mysqli_error($db));
 

@@ -1,8 +1,8 @@
 <!-- CONTRÔLEUR PRINCIPAL-->
 <?php
 
-$db = mysqli_connect("localhost","root","","siteportfolio",3308);
-mysqli_set_charset($db,"utf8_bin");
+$db = mysqli_connect("sqlgold.webmo.fr:48614","web2020audrey","NHqEpuE8N3VI","web2020audrey",3308);
+mysqli_set_charset($db,"utf8");
 
 if (isset($_GET['acc'])) {
     require_once "files/accueil.php";

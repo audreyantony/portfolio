@@ -5,10 +5,13 @@ if(!isset($_SESSION['idsession'])|| $_SESSION['idsession']!==session_id()){
     header("Location: ./?crud");
 }
 
+$sql = "SELECT id, nom, prenom, contenu, email FROM mail ORDER BY id DESC ;";
+
+$querymail = mysqli_query($db, $sql) or die("Erreur: " . mysqli_errno($db) . mysqli_error($db));
+
+$nb = mysqli_num_rows($querymail);
 
 
-$db = mysqli_connect("localhost","root","","crudbase",3308);
-mysqli_set_charset($db,"utf8");
 ?>
 <!DOCTYPE html>
 <html lang="fr">

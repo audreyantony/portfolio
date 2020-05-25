@@ -18,7 +18,7 @@ if(!empty($_POST)){
         header("Location: ./?create");
         exit();
     }else{
-        $sql = "INSERT INTO siteportfolio.liens (nom,link,texteliens,idutilisateur) 
+        $sql = "INSERT INTO liens (nom,link,texteliens,idutilisateur) 
                 VALUES ('$nom','$link','$texteliens',$idutilisateur);";
         $envoi = mysqli_query($db,$sql);
 
@@ -29,7 +29,7 @@ if(!empty($_POST)){
     }
 }else {
 
-    $sql = "SELECT id, pseudo FROM siteportfolio.utilisateur ORDER BY pseudo ASC;";
+    $sql = "SELECT id, pseudo FROM utilisateur ORDER BY pseudo ASC;";
     $queryUtil = mysqli_query($db, $sql) or die(mysqli_errno($db)." ".mysqli_error($db));
     if (empty(mysqli_num_rows($queryUtil))) {
         header("Location: ./");

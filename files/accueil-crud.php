@@ -7,8 +7,8 @@ if(!isset($_SESSION['idsession'])|| $_SESSION['idsession']!==session_id()){
 
 
 $sql = "SELECT l.id, l.nom, l.link, l.texteliens, u.pseudo
-FROM siteportfolio.liens l 
-	INNER JOIN siteportfolio.utilisateur u 
+FROM liens l 
+	INNER JOIN utilisateur u 
     ON l.idutilisateur = u.id
 ORDER BY l.id DESC;";
 

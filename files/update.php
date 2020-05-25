@@ -21,7 +21,7 @@ if(!empty($_POST)){
         !empty($idlien) &&
         !empty($idutilisateur)
     ){
-        $sql="UPDATE siteportfolio.liens SET nom ='$nom', link ='$link', texteliens='$texteliens', idutilisateur = $idutilisateur WHERE id = $idlien ;";
+        $sql="UPDATE liens SET nom ='$nom', link ='$link', texteliens='$texteliens', idutilisateur = $idutilisateur WHERE id = $idlien ;";
 
         mysqli_query($db,$sql) or die("Erreur : ".mysqli_errno($db)." ".mysqli_error($db));
 
@@ -35,7 +35,7 @@ if(!empty($_POST)){
 
 if (!empty($idpage)) {
     $sql = "SELECT l.idutilisateur,l.id, l.nom, l.link, l.texteliens, u.pseudo
-    FROM siteportfolio.liens l 
+    FROM liens l 
         INNER JOIN utilisateur u 
         ON l.idutilisateur = u.id
     WHERE l.id=$idpage";

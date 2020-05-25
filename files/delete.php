@@ -8,14 +8,14 @@ if(!isset($_SESSION['idsession'])|| $_SESSION['idsession']!==session_id()){
 
 if(isset($_GET['confirm'])){
 
-    $sql = "DELETE FROM siteportfolio.liens WHERE id=$idpage";
+    $sql = "DELETE FROM liens WHERE id=$idpage";
     mysqli_query($db,$sql) or die("Erreur n° ".mysqli_errno($db));
     header("Location: ./?acccrud");
     exit();
 }
 
 $sql = "SELECT l.id, l.nom
-        FROM siteportfolio.liens l 
+        FROM liens l 
         WHERE l.id=$idpage";
 
 $querydelete = mysqli_query($db,$sql) or die("Erreur: ".mysqli_errno($db).' '.mysqli_error($db));

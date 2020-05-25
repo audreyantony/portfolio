@@ -16,6 +16,9 @@
                 </h5>
                 <h5><input type="submit" value="Envoyer"></h5>
             </form>
+                <a href="?acccrud"><button>
+                        Retour
+                    </button></a>
         </div>
     </div>
 </section>

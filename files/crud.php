@@ -14,8 +14,8 @@ if(isset($_POST['pseudo'],$_POST['mdp'])) {
 
     if(!empty($pseudo)&&!empty($mdp)) {
 
-        $db = mysqli_connect("localhost", "root", "", "siteportfolio", 3308);
-        mysqli_set_charset($db, "utf8");
+        $db = mysqli_connect("sqlgold.webmo.fr:48614","web2020audrey","NHqEpuE8N3VI","web2020audrey",3308);
+        mysqli_set_charset($db,"utf8");
 
         $sql = "SELECT * FROM utilisateur WHERE pseudo='$pseudo' AND mdp ='$mdp';";
 
