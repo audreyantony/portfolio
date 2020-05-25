@@ -427,9 +427,9 @@
                 <span class="dot" onclick="currentSlide(9)"></span>
             </div>
         </div>
-        <button class="btntutos">
-            <a href="?p=tutos">Retour</a>
-        </button>
+        <a href="?tutos"><button>
+            Retour
+        </button></a>
     </div>
     <script>
         var slideIndex = 1;

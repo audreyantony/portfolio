@@ -5,15 +5,15 @@
         <p>Cette section est encore en construction ! <br>
             Vous y trouverez bientôt mon CV<br>
             Si vous voulez voir autre chose :<br>
-            <button class="btncv">
-                <a href="http://audrey.webdev-cf2m.be/site_prefo/" target="_blank">Site Préformation</a>
-            </button>
-            <button class="btncv">
-                <a href="http://www.mole81.fr/" target="_blank">Entreprise MOLE 81</a>
-            </button>
+            <a href="http://audrey.webdev-cf2m.be/site_prefo/" target="_blank"><button>
+                Site Préformation
+            </button></a>
+            <a href="http://www.mole81.fr/" target="_blank"><button>
+            Entreprise MOLE 81
+            </button></a>
         </p>
-        <button>
-            <a href="?p=acc">Retour à l'accueil</a>
-        </button>
+        <a href="?acc"><button>
+            Retour à l'accueil
+        </button></a>
     </div>
 </section>

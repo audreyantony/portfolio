@@ -111,8 +111,8 @@
             }
         </script>
 
-        <button>
-            <a href="?p=acc">Retour à l'accueil</a>
-        </button>
+        <a href="?acc"><button>
+                Retour à l'accueil
+            </button></a>
     </div>
 </section>

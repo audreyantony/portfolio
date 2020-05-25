@@ -1,41 +1,41 @@
 <!-- CONTRÔLEUR PRINCIPAL-->
 <?php
 
-if(!isset($_GET["p"])){
-    include "files/accueil.php";
-}else{
+$db = mysqli_connect("localhost","root","","siteportfolio",3308);
+mysqli_set_charset($db,"utf8_bin");
 
-    $p = $_GET["p"];
-
-    switch ($p){
-        case "acc":
-            include "files/accueil.php";
-            break;
-        case "gal":
-            include "files/galerie.php";
-            break;
-        case "link":
-            include "files/liens.php";
-            break;
-        case "tutos":
-            include "files/tutos.php";
-            break;
-        case "tutoriel-favori":
-            include "files/tutoriel-favori.php";
-            break;
-        case "tutoriel-maison":
-            include "files/tutoriel-maison.php";
-            break;
-        case "contact":
-            include "files/contact.php";
-            break;
-        case "cv":
-            include "files/cv.php";
-            break;
-        case "crud":
-            include "files/crud.php";
-            break;
-        default:
-            include "files/accueil.php";
-    }
-}
+if (isset($_GET['acc'])) {
+    require_once "files/accueil.php";
+}elseif (isset($_GET['gal'])) {
+    require_once "files/galerie.php";
+}elseif (isset($_GET['link'])) {
+    require_once "files/liens.php";
+}elseif (isset($_GET['tutos'])) {
+    require_once "files/tutos.php";
+}elseif (isset($_GET['tutoriel-favori'])) {
+    require_once "files/tutoriel-favori.php";
+}elseif (isset($_GET['tutoriel-maison'])) {
+    require_once "files/tutoriel-maison.php";
+}elseif (isset($_GET['contact'])) {
+    require_once "files/contact.php";
+}elseif (isset($_GET['cv'])) {
+    require_once "files/cv.php";
+}elseif (isset($_GET['crud'])) {
+    require_once "files/crud.php";
+}elseif (isset($_GET['mails'])) {
+    require_once "files/mails.php";
+}elseif (isset($_GET['acccrud'])) {
+    require_once "files/accueil-crud.php";
+}elseif (isset($_GET['create'])) {
+    require_once "files/create.php";
+}elseif (isset($_GET['deco'])) {
+    require_once "files/deconnect.php";
+} elseif (isset($_GET['update']) && ctype_digit($_GET['update'])) {
+    $idpage = (int)$_GET['update'];
+    require_once "files/update.php";
+} elseif (isset($_GET['delete']) && ctype_digit($_GET['delete'])) {
+    $idpage = (int)$_GET['delete'];
+    require_once "files/delete.php";
+} else {
+    require_once "files/accueil.php";
+} ?>

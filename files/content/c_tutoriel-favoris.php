@@ -7,8 +7,8 @@
                 <iframe src="https://www.youtube.com/embed/LNqBKTeeiWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
         </div>
-        <button>
-            <a href="?p=tutos">Retour</a>
-        </button>
+        <a href="?tutos"><button>
+            Retour
+        </button></a>
     </div>
 </section>

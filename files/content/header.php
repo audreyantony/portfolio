@@ -8,13 +8,13 @@
             <span></span>
             <span></span>
             <ul id="menu">
-                <a href="?p=acc"><li>Accueil</li></a>
-                <a href="?p=gal"><li>Galerie</li></a>
-                <a href="?p=link"><li>Liens</li></a>
-                <a href="?p=tutos"><li>Tutoriels</li></a>
-                <a href="?p=cv"><li>CV</li></a>
-                <a href="?p=contact"><li>Contact</li></a>
-                <a href="?p=crud"><li>.</li></a>
+                <a href="?acc"><li>Accueil</li></a>
+                <a href="?gal"><li>Galerie</li></a>
+                <a href="?link"><li>Liens</li></a>
+                <a href="?tutos"><li>Tutoriels</li></a>
+                <a href="?cv"><li>CV</li></a>
+                <a href="?contact"><li>Contact</li></a>
+                <a href="?crud"><li>.</li></a>
             </ul>
         </div>
     </nav>
